@@ -2,7 +2,7 @@ package com.st.springdemo;
 
 import org.springframework.stereotype.Component;
 
-@Component("printer")
+// @Component("printer")
 public class PrinterPrint implements Print {
 
 	public void print(String msg) {
