@@ -8,17 +8,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringDemoApplication implements CommandLineRunner {
 
-//    @Autowired
-//    private Employee emp1, emp2;
+    @Autowired
+    private Employee emp;
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringDemoApplication.class, args);
 	}
 	
 	public void run(String ... args) {
-		// System.out.println(hello.getMessage());
-//		System.out.println(emp1); 
-//		System.out.println(emp2);
+		emp.print(); 
 	}
 }
  

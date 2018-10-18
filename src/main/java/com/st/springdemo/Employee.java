@@ -4,12 +4,14 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 // @Scope(scopeName="prototype")
 public class Employee {
 	private Print printer;
+	
 	@Autowired
 	public void setPrinter(Print printer) {
 		 System.out.println("Setting printer");

@@ -1,8 +1,10 @@
 package com.st.springdemo;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-// @Component("printer")
+@Component
+// @Primary
 public class PrinterPrint implements Print {
 
 	public void print(String msg) {
