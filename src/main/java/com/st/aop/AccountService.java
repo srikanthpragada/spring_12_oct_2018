@@ -10,6 +10,9 @@ public class AccountService {
 	}
 	
 	public void withdraw(double amount) {
+		if (amount < 1)
+			throw new RuntimeException("Invalid Amount!");
+		
 		System.out.println("Withdrawing "  + amount);
 	}
 

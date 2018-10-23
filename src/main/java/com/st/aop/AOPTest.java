@@ -19,7 +19,8 @@ public class AOPTest implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		  System.out.println(accountService.getClass());
 	      accountService.deposit(10000);
-	      accountService.withdraw(10000);
+	      //accountService.withdraw(10000);
+	      //accountService.withdraw(-10000);
 	}
 	
 }
