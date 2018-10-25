@@ -15,6 +15,17 @@ public class Job {
 
 	@Column(name = "Job_title")
 	private String title;
+	
+	@Column(name = "min_salary")
+	private int minsal;
+
+	public int getMinsal() {
+		return minsal;
+	}
+
+	public void setMinsal(int minsal) {
+		this.minsal = minsal;
+	}
 
 	public Job() {
 		super();

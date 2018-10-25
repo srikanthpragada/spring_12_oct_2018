@@ -23,7 +23,9 @@ public class JobsManager implements CommandLineRunner {
 	    System.out.println("Class : " + jobRepo.getClass());
 	   //updateJobTitle("SD_DEV","Spring MVC Developer");
 	   //deleteJob("SP_DEV");
-	   countByJobId();
+	   // countByJobId();
+	   // showCostlyJobs();
+	   showCostlyJobs(10000);
 	}
 	
 	public void countByJobId() {
@@ -54,5 +56,19 @@ public class JobsManager implements CommandLineRunner {
 	public void deleteJob(String id)
 	{
 		jobRepo.deleteById(id);
+	}
+	
+	public void showCostlyJobs() {
+		List<Job> jobs = (List<Job>) jobRepo.getCostlyJobs();
+		for (Job j : jobs) {
+			System.out.printf("%-30s  %d\n",j.getTitle(), j.getMinsal());
+		}
+	}
+	
+	public void showCostlyJobs(int minsal) {
+		List<Job> jobs = (List<Job>) jobRepo.getCostlyJobs(minsal);
+		for (Job j : jobs) {
+			System.out.printf("%-30s  %d\n",j.getTitle(), j.getMinsal());
+		}
 	}
 }
