@@ -11,7 +11,8 @@ public interface JobRepository extends  CrudRepository<Job, String>{
 	@Query(value="from Job j where j.minsal > 5000")
 	List<Job>  getCostlyJobs();
 	
-	@Query(value="select * from jobs where min_salary > ?1", nativeQuery=true)
+	@Query(value="select * from jobs where min_salary > ?1",
+		   nativeQuery=true)
 	List<Job>  getCostlyJobs(int minSal);
 	
 }
