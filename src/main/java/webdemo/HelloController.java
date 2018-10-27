@@ -19,8 +19,9 @@ public class HelloController {
 	
 	@RequestMapping(value = "/wish")
 	@ResponseBody
-	public String wish(@RequestParam(name = "user") String user) {
-		 return "<h1>Good Morning " + user + "</h1>";  
+	public String wish(@RequestParam(name = "user",required = false) String user) {
+		 return "<h1>Good Morning " +
+	              (user ==  null ? "Unknown" : user) + "</h1>";  
 	}
 
 	@RequestMapping(value = "/greet")
