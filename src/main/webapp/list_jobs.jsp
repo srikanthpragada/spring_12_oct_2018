@@ -18,6 +18,7 @@
       <td>${job.maxsal} </td>
       <td> 
           <a href="/jobs/delete/${job.id}">Delete</a>
+          <a href="/jobs/edit/${job.id}">Edit</a>
       </td>
     </tr>  
 
