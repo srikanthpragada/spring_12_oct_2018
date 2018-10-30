@@ -1,13 +1,8 @@
 <%@include file="header.html"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="sf"%>
-<h1>Add Job</h1>
+<h1>Edit Job</h1>
 
 <sf:form method="post" modelAttribute="job">
-Id <br />
-	<sf:input type="text" path="id" />
-	<sf:errors path="id" />
-	<p />
-
 Title <br />
 	<sf:input type="text" path="title" />
 	<sf:errors path="title" />
@@ -23,7 +18,7 @@ Max Salary <br />
 	<sf:errors path="maxsal" />
 	<p />
 
-	<input type="submit" value="Add Job" />
+	<input type="submit" value="Update Job" />
 
 </sf:form>
 

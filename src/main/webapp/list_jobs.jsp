@@ -17,7 +17,8 @@
       <td>${job.minsal} </td>
       <td>${job.maxsal} </td>
       <td> 
-          <a href="/jobs/delete/${job.id}">Delete</a>
+          <a href="/jobs/delete/${job.id}" 
+              onclick="return confirm('Do you really want to delete job?')">Delete</a>
           <a href="/jobs/edit/${job.id}">Edit</a>
       </td>
     </tr>  
